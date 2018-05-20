@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>用户登录</title>
+		<style type="text/css">
+			* {
+				padding: 0px;
+				margin: 0px;
+			}
+			body{
+				background-color: #FFE4C4;
+			}
+			h1{
+				color: burlywood;
+				position: relative;
+				top:0;
+				font-size: 30px;
+				text-shadow: 5px 5px 8px darkslategray;
+			}
+			
+			div.wraper {
+				position: relative;
+				width: 400px;
+				height: 226px;
+				margin: 20% 50%;
+				left: -200px;
+				top: -113px;
+			}
+			
+			div.user {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+			
+			div.user img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			div.denglu {
+				width: 100%;
+				position: absolute;
+				left: 80px;
+				bottom: 5px;
+			}
+			
+			div.denglu img {
+				width: 60%;
+			}
+			
+			div.tongyong {
+				position: absolute;
+				z-index: 999;
+			}
+			
+			div.un {
+				left: 32px;
+				top: 66px;
+			}
+			
+			div.pw {
+				left: 32px;
+				top: 114px;
+			}
+			
+			div.wraper input {
+				height: 21px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>欢迎登陆统一身份认证系统</h1>
+		<div class="wraper">
+			<div class="un tongyong">
+				<input type="text" name="username" id="uername" / size="44">
+			</div>
+			<div class="pw tongyong">
+				<input type="password" name="password" id="password" / size="44" required="">
+			</div>
+
+			<div class="user">
+				<img src="image/user.png" />
+			</div>
+			<div class="denglu"><a href="表单.html"><img src="image/denglu.png" id='dl' /></a></div>
+		</div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(':text').attr('placeholder','请输入用户昵称')
+				.focus(function(){
+					$(this).attr('placeholder','');
+				}).blur(function (){
+					$(this).attr('placeholder','请输入用户昵称');
+				});
+				$(':password').attr('placeholder','请输入用户密码').focus(function(){
+					$(this).attr('placeholder','');
+				}).blur(function (){
+					$(this).attr('placeholder','请输入用户密码');
+				});
+			});
+		</script>
+		<script type="text/javascript">
+			var a='你好';
+			console.log(a.charAt(0));//charAt()方法用于返回字符串指定位置的字符
+			console.log(a.charCodeAt(0));//charCodeAt()方法用于返回字符串制定位置的字符的unicode编码
+			//unicode编码的值在0--65535之间
+		</script>
+	</body>
+
+</html>
